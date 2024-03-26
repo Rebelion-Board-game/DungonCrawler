@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://cau0iddxgec2w"]
+
+[ext_resource type="Script" path="res://Game/cell/cell.gd" id="1_7x4xk"]
+[ext_resource type="Texture2D" uid="uid://bc85rl8djljh2" path="res://icon.svg" id="2_jfhun"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0uc8s"]
+size = Vector2(1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8biqg"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_71b8v"]
+size = Vector2(1, 1)
+orientation = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cj1qe"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byton"]
+metallic = 1.0
+metallic_texture = ExtResource("2_jfhun")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2v324"]
+material = SubResource("StandardMaterial3D_byton")
+size = Vector2(1, 1)
+orientation = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b2lns"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_35r8e"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ymnla"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rbplu"]
+data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
+
+[node name="cell" type="Node3D"]
+script = ExtResource("1_7x4xk")
+
+[node name="Bottom" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_0uc8s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bottom"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bottom/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8biqg")
+
+[node name="West" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.5, 0)
+mesh = SubResource("PlaneMesh_71b8v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="West"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="West/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cj1qe")
+
+[node name="East" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.5, 0.5, 0)
+mesh = SubResource("PlaneMesh_2v324")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="East"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="East/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_b2lns")
+
+[node name="North" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.5, -0.5)
+mesh = SubResource("PlaneMesh_2v324")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="North"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="North/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_35r8e")
+
+[node name="Top" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, -3.82137e-15, 8.74228e-08, -1, 0, 1, 0)
+mesh = SubResource("PlaneMesh_2v324")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Top"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Top/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ymnla")
+
+[node name="South" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0.5)
+mesh = SubResource("PlaneMesh_2v324")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="South"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="South/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rbplu")
