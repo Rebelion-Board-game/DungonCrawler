@@ -3,9 +3,6 @@ extends CharacterBody3D
 #@onready var timerprocessor: = $Timer
 #@onready var animation: = $AnimationPlayer
 @onready var forward: = $Ray_front
-@onready var back: = $Ray_back
-@onready var right: = $Ray_right
-@onready var left: = $Ray_left
 @onready var camera = $Camera3D	
 
 var direction = Vector3.FORWARD
@@ -22,8 +19,6 @@ func get_direction():
 	return direction.get_collider().global_transform.origin - global_transform.origin
 	
 func move():
-	print(forward.is_colliding())
-	print(forward.get_collider())
 	if !forward.is_colliding():
 		global_transform.origin.x += direction.x
 		global_transform.origin.z += direction.z

@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cau0iddxgec2w"]
+[gd_scene load_steps=14 format=3 uid="uid://cau0iddxgec2w"]
 
 [ext_resource type="Script" path="res://Game/cell/cell.gd" id="1_7x4xk"]
-[ext_resource type="Texture2D" uid="uid://bc85rl8djljh2" path="res://icon.svg" id="2_jfhun"]
+[ext_resource type="Texture2D" uid="uid://benx7110wtipt" path="res://Light/texture_08.png" id="2_6yitj"]
+[ext_resource type="Texture2D" uid="uid://dn80fqjtiubey" path="res://Light/texture_07.png" id="3_wjwkv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0uc8s"]
 size = Vector2(1, 1)
@@ -17,8 +18,10 @@ orientation = 0
 data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byton"]
+albedo_texture = ExtResource("2_6yitj")
 metallic = 1.0
-metallic_texture = ExtResource("2_jfhun")
+metallic_texture = ExtResource("3_wjwkv")
+roughness = 0.3
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2v324"]
 material = SubResource("StandardMaterial3D_byton")

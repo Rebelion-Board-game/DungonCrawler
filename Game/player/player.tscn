@@ -11,21 +11,11 @@ near = 0.001
 far = 5000.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 0.5
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
+light_energy = 0.5
 
 [node name="Ray_front" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -0.6, 0)
-
-[node name="Ray_back" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-visible = false
-
-[node name="Ray_left" type="RayCast3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
-visible = false
-
-[node name="Ray_right" type="RayCast3D" parent="."]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 0, 0)
-visible = false
