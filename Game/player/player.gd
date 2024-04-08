@@ -12,18 +12,7 @@ var direction = Vector3.FORWARD
 
 const SPEED = 100
 
-func collision_check(direction):
-	if direction != null:
-		return direction.is_colliding()
-	else:
-		return false
-
-func get_direction():
-	return direction.get_collider().global_transform.origin - global_transform.origin
-	
 func move():
-	print(forward.is_colliding())
-	print(forward.get_collider())
 	if !forward.is_colliding():
 		global_transform.origin.x += direction.x
 		global_transform.origin.z += direction.z
@@ -40,3 +29,7 @@ func _input(event):
 	if event.is_action_pressed("ui_down"):
 		rotate_y(deg_to_rad(180))
 		direction = -camera.global_transform.basis.z.normalized()
+
+func _process(_delta):
+	Global.player_pos[0] = transform.basis.z
+	Global.player_pos[1] = transform.basis.x
