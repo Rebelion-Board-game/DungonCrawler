@@ -1,6 +1,7 @@
 # DungeonCrawler: A Godot 4 Asset for Basic Dungeon Crawler Mechanics
 
-DungeonCrawler is a valuable asset for Godot 4, designed to empower developers with fundamental dungeon crawler mechanics, including movement and dungeon generation. /n
+DungeonCrawler is a valuable asset for Godot 4, designed to empower developers with fundamental dungeon crawler mechanics, including movement and dungeon generation.
+
 This repository is a port of the original project hosted at [uheartbeast/3d-dungeon](https://github.com/uheartbeast/3d-dungeon) tailored for Godot 4.
 
 ## How to Run
