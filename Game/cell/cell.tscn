@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cau0iddxgec2w"]
+[gd_scene load_steps=12 format=3 uid="uid://cau0iddxgec2w"]
 
-[ext_resource type="Script" path="res://Game/cell/cell.gd" id="1_7x4xk"]
-[ext_resource type="Texture2D" uid="uid://benx7110wtipt" path="res://Light/texture_08.png" id="2_6yitj"]
-[ext_resource type="Texture2D" uid="uid://dn80fqjtiubey" path="res://Light/texture_07.png" id="3_wjwkv"]
+[ext_resource type="Script" uid="uid://cykl8dsfj3kyf" path="res://Game/cell/cell.gd" id="1_7x4xk"]
+[ext_resource type="Material" uid="uid://drxu88g34gafy" path="res://Game/cell/cell.tres" id="2_hhbi7"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0uc8s"]
 size = Vector2(1, 1)
@@ -11,20 +10,15 @@ size = Vector2(1, 1)
 data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_71b8v"]
+material = ExtResource("2_hhbi7")
 size = Vector2(1, 1)
 orientation = 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cj1qe"]
 data = PackedVector3Array(0, -0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byton"]
-albedo_texture = ExtResource("2_6yitj")
-metallic = 1.0
-metallic_texture = ExtResource("3_wjwkv")
-roughness = 0.3
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_2v324"]
-material = SubResource("StandardMaterial3D_byton")
+material = ExtResource("2_hhbi7")
 size = Vector2(1, 1)
 orientation = 0
 

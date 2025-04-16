@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7yc03naufag0"]
+[gd_scene load_steps=5 format=4 uid="uid://b7yc03naufag0"]
 
 [ext_resource type="Texture2D" uid="uid://dp2fdqjbwrc01" path="res://Titles.png" id="1_vs0g8"]
-[ext_resource type="Script" path="res://Game/Map/map.gd" id="1_xvy16"]
+[ext_resource type="Script" uid="uid://barvlmk4ff3qa" path="res://Game/Map/map.gd" id="1_xvy16"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xs7ln"]
 texture = ExtResource("1_vs0g8")
@@ -380,8 +380,7 @@ sources/0 = SubResource("TileSetAtlasSource_xs7ln")
 [node name="Map" type="Node2D"]
 script = ExtResource("1_xvy16")
 
-[node name="MapCreator" type="TileMap" parent="."]
+[node name="MapCreator" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAACAAMAAAABAAAAAAACAAMAAAACAAAAAAACAAMAAAADAAAAAAACAAMAAAAEAAAAAAACAAMAAAAFAAAAAAACAAMAAAAGAAAAAAACAAMAAAAGAAEAAAACAAMAAAAGAAIAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_no6t2")
 rendering_quadrant_size = 32
-format = 2
-layer_0/tile_data = PackedInt32Array(3, 917504, 7, 65539, 917504, 7, 131075, 917504, 7, 196611, 917504, 7, 4, 917504, 7, 5, 917504, 7, 6, 917504, 7, 7, 917504, 7, 65543, 917504, 7, 131079, 917504, 7, 196615, 917504, 7, 196614, 917504, 7, 196613, 917504, 7, 196612, 917504, 7, 2, 917504, 7, 1, 917504, 7, 0, 917504, 7, 65535, 917504, 7)

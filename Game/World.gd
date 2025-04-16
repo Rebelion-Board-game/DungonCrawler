@@ -9,7 +9,7 @@ var cells = []
 func _ready():
 	var map = Map.instantiate()
 	var tile_map = map.get_tilemap()
-	var used_tiles = tile_map.get_used_cells(0)
+	var used_tiles = tile_map.get_used_cells()
 	map.free()
 	for tile in used_tiles:
 		var cell = Cell.instantiate()

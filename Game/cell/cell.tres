@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://drxu88g34gafy"]
+
+[ext_resource type="Texture2D" uid="uid://benx7110wtipt" path="res://Light/texture_08.png" id="1_f04hc"]
+[ext_resource type="Texture2D" uid="uid://dn80fqjtiubey" path="res://Light/texture_07.png" id="2_cp1x1"]
+
+[resource]
+albedo_texture = ExtResource("1_f04hc")
+metallic = 1.0
+metallic_texture = ExtResource("2_cp1x1")
+roughness = 0.3
