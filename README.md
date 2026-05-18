@@ -12,3 +12,9 @@ This repository is a port of the original project hosted at [uheartbeast/3d-dung
 To generate a dungeon, utilize the tile map found at `Game/Map/map.tscn`. 
 Simply add any box to initiate the creation of a 3D dungeon cell (`Game/cell/cell.tscn`).
 ![Screenshot](Screenshot.png)
+
+## Controls
+* **W / Up Arrow:** Walk forward (hold to walk continuously)
+* **A / Left Arrow:** Rotate 90° Left (hold for controlled continuous rotation)
+* **D / Right Arrow:** Rotate 90° Right (hold for controlled continuous rotation)
+* **S / Down Arrow:** About-face (180° rotation)
