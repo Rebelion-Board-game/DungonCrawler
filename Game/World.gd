@@ -6,7 +6,7 @@ const Cell = preload("res://Game/cell/cell.tscn")
 
 var cells = []
 
-func _ready():
+func _ready() -> void:
 	var map = Map.instantiate()
 	var tile_map = map.get_tilemap()
 	var used_tiles = tile_map.get_used_cells()

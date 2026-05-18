@@ -8,13 +8,21 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="DungeonCrawler"
 run/main_scene="res://Game/World.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Game/Global.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
